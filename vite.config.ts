@@ -5,7 +5,7 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      '/api': 'https://team-management-system-henna.vercel.app'
+      '/api': 'http://localhost:5001'
     }
   }
 });
