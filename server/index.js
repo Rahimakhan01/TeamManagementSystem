@@ -20,7 +20,9 @@ const app = express();
 const PORT = process.env.PORT || 5001;
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: 'https://team-management-system-pzjq.vercel.app', // Allow frontend URL
+}));
 app.use(express.json());
 
 // Set up static file serving for uploads
@@ -50,10 +52,9 @@ const connectDB = async () => {
 
 // Serve static assets in production
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, '../dist')));
-  
+  app.use(express.static(path.join(__dirname, '../dist'))); // Adjust this path to where your production build is
   app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, '../dist', 'index.html'));
+    res.sendFile(path.resolve(__dirname, '../dist', 'index.html')); // Serve the frontend entry point
   });
 }
 
