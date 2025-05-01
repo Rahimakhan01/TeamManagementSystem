@@ -67,6 +67,7 @@ const ViewMembersPage: React.FC = () => {
 
   if (loading) {
     return (
+      
       <div className="container mx-auto px-4 py-20 flex justify-center items-center">
         <div className="text-center">
           <Loader className="animate-spin mx-auto mb-4 text-blue-600" size={40} />
