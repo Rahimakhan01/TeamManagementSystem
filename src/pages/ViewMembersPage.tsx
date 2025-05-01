@@ -94,6 +94,11 @@ const ViewMembersPage: React.FC = () => {
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="flex flex-col md:flex-row md:items-center justify-between mb-8">
+        <h1 className="text-4xl font-bold text-blue-900 flex items-center mb-4 md:mb-0">
+          Welcome to our Amazing Team
+        </h1>
+      </div>
+      <div className="flex flex-col md:flex-row md:items-center justify-between mb-8">
         <h1 className="text-2xl font-bold text-blue-700 flex items-center mb-4 md:mb-0">
           <Users className="mr-2" size={28} />
           Team Members
